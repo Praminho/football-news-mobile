@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// TODO: Impor drawer yang sudah dibuat sebelumnya
 import 'package:football_news/widgets/left_drawer.dart';
 
 class NewsFormPage extends StatefulWidget {
@@ -13,9 +12,9 @@ class _NewsFormPageState extends State<NewsFormPage> {
     final _formKey = GlobalKey<FormState>();
     String _title = "";
     String _content = "";
-    String _category = "update"; // default
+    String _category = "update"; 
     String _thumbnail = "";
-    bool _isFeatured = false; // default
+    bool _isFeatured = false; 
 
     final List<String> _categories = [
       'transfer',
@@ -38,7 +37,6 @@ class _NewsFormPageState extends State<NewsFormPage> {
             backgroundColor: Colors.indigo,
             foregroundColor: Colors.white,
           ),
-          // TODO: Tambahkan drawer yang sudah dibuat di sini
           drawer: LeftDrawer(),
           body: Form(
             key: _formKey,
@@ -46,7 +44,6 @@ class _NewsFormPageState extends State<NewsFormPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // === Title ===
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
@@ -71,7 +68,6 @@ class _NewsFormPageState extends State<NewsFormPage> {
                     ),
                   ),
 
-                  // === Content ===
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
@@ -97,7 +93,6 @@ class _NewsFormPageState extends State<NewsFormPage> {
                     ),
                   ),
 
-                  // === Category ===
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: DropdownButtonFormField<String>(
@@ -123,7 +118,6 @@ class _NewsFormPageState extends State<NewsFormPage> {
                     ),
                   ),
 
-                  // === Thumbnail URL ===
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
@@ -142,7 +136,6 @@ class _NewsFormPageState extends State<NewsFormPage> {
                     ),
                   ),
 
-                  // === Is Featured ===
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: SwitchListTile(
@@ -156,7 +149,6 @@ class _NewsFormPageState extends State<NewsFormPage> {
                     ),
                   ),
 
-                  // === Tombol Simpan ===
                   Align(
                     alignment: Alignment.bottomCenter,
                     child: Padding(

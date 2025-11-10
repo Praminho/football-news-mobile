@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:football_news/screens/newslist_form.dart';
-import 'package:football_news/widgets/left_drawer.dart';
 
-// ======================================================
-// Class ItemHomepage
-// ======================================================
-// Menyimpan data untuk setiap tombol card (name dan icon)
 class ItemHomepage {
   final String name;
   final IconData icon;
@@ -13,10 +8,6 @@ class ItemHomepage {
   ItemHomepage(this.name, this.icon);
 }
 
-// ======================================================
-// Class ItemCard
-// ====================================================== 
-// Card tombol dengan ikon dan teks
 class ItemCard extends StatelessWidget {
   final ItemHomepage item;
 
@@ -29,13 +20,11 @@ class ItemCard extends StatelessWidget {
       borderRadius: BorderRadius.circular(12),
       child: InkWell(
         onTap: () {
-          // Memunculkan SnackBar ketika diklik
           ScaffoldMessenger.of(context)
             ..hideCurrentSnackBar()
             ..showSnackBar(SnackBar(
                 content: Text("Kamu telah menekan tombol ${item.name}!")));
 
-          // Navigate ke route yang sesuai (tergantung jenis tombol)
           if (item.name == "Add News") {
             // TODO: Gunakan Navigator.push untuk melakukan navigasi ke MaterialPageRoute yang mencakup NewsFormPage.
             Navigator.push(

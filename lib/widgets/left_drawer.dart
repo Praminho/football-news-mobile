@@ -39,7 +39,6 @@ class LeftDrawer extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.home_outlined),
             title: const Text('Home'),
-            // Bagian redirection ke MyHomePage
             onTap: () {
               Navigator.pushReplacement(
                   context,
@@ -51,7 +50,6 @@ class LeftDrawer extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.post_add),
             title: const Text('Add News'),
-            // Bagian redirection ke NewsFormPage
             onTap: () {
               Navigator.pushReplacement(
                   context,
@@ -63,7 +61,6 @@ class LeftDrawer extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.newspaper),
             title: const Text('See Football News'),
-            // Bagian redirection ke halaman melihat news
             onTap: () {
               Navigator.pushReplacement(
                   context,
